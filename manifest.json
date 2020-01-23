@@ -1,0 +1,26 @@
+{
+  "name": "My first extension",
+  "description": "This is a dummy description",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "index.js"
+      ],
+      "matches": [
+        "*://www.google.com/*",
+        "*://www.youtube.com/*"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
